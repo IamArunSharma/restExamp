@@ -33,7 +33,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 		if(emps.get(e.getId()) != null){
 			response.setStatus(false);
 			response.setMessage("Employee Already Exists");
-			response.setErrorCode("EC-0");
+			response.setErrorCode("EC-02");
 			return Response.status(422).entity(response).build();
 		}
 		emps.put(e.getId(), e);
